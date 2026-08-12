@@ -153,12 +153,7 @@ Catatan: Lokasi dan nama variabel bisa berbeda di implementasi. Periksa [backend
 ```
 ## 👤 Author
 
-Built with 🔥 by **[@bygugu.11](https://instagram.com/bygugu.11)**
-
-## Kontak
-
-
-
+Built with 🔥https://instagram.com/bygugu.11
 
 > ⚠️ **Disclaimer:** This tool respects YouTube's Terms of Service — it only processes
 > publicly available metadata/subtitles or audio you have rights to. AI-generated
