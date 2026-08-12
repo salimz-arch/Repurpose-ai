@@ -144,7 +144,7 @@ Catatan: Lokasi dan nama variabel bisa berbeda di implementasi. Periksa [backend
 ```
 ## 🗺️ Roadmap
 
-- [ ] Midtrans / full payment-gateway option
+- [ ] payment-option
 - [ ] Bulk & playlist processing
 - [ ] Podcast/audio upload input
 - [ ] Thumbnail text-overlay compositor (PIL)
@@ -153,7 +153,7 @@ Catatan: Lokasi dan nama variabel bisa berbeda di implementasi. Periksa [backend
 ```
 ## 👤 Author
 
-Built with 🔥https://instagram.com/bygugu.11
+Built with 🔥by Salimz
 
 > ⚠️ **Disclaimer:** This tool respects YouTube's Terms of Service — it only processes
 > publicly available metadata/subtitles or audio you have rights to. AI-generated
