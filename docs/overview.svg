@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#0B1220"/>
+  <text x="640" y="44" fill="#E2E8F0" font-size="26" font-weight="700" text-anchor="middle">⚡ RePurpose AI — System Overview</text>
+  <text x="640" y="70" fill="#94A3B8" font-size="14" text-anchor="middle">One YouTube video in → nine ready-to-publish content formats out</text>
+
+  <!-- Frontend -->
+  <rect x="40" y="270" width="250" height="140" rx="14" fill="#1E293B" stroke="#334155"/>
+  <text x="165" y="305" fill="#E2E8F0" font-size="16" font-weight="700" text-anchor="middle">⚛️ Next.js Frontend</text>
+  <text x="165" y="332" fill="#94A3B8" font-size="12" text-anchor="middle">Dark enterprise dashboard</text>
+  <text x="165" y="352" fill="#94A3B8" font-size="12" text-anchor="middle">Sidebar • Credits • Library</text>
+  <text x="165" y="372" fill="#94A3B8" font-size="12" text-anchor="middle">History • Public share links</text>
+
+  <!-- Backend -->
+  <rect x="400" y="240" width="300" height="200" rx="14" fill="#1E293B" stroke="url(#g1)" stroke-width="2"/>
+  <text x="550" y="275" fill="#E2E8F0" font-size="16" font-weight="700" text-anchor="middle">🐍 FastAPI Backend</text>
+  <text x="550" y="305" fill="#94A3B8" font-size="12" text-anchor="middle">JWT Auth + Email OTP</text>
+  <text x="550" y="328" fill="#94A3B8" font-size="12" text-anchor="middle">Freemium credits engine</text>
+  <text x="550" y="351" fill="#94A3B8" font-size="12" text-anchor="middle">WhatsApp payment approval</text>
+  <text x="550" y="374" fill="#94A3B8" font-size="12" text-anchor="middle">Worker: transcribe → repurpose</text>
+  <text x="550" y="397" fill="#94A3B8" font-size="12" text-anchor="middle">Exports: Notion • ZIP • Share</text>
+
+  <!-- Groq -->
+  <rect x="400" y="90" width="300" height="90" rx="14" fill="#1E293B" stroke="#F59E0B"/>
+  <text x="550" y="125" fill="#FBBF24" font-size="15" font-weight="700" text-anchor="middle">🧠 Groq Cloud</text>
+  <text x="550" y="150" fill="#94A3B8" font-size="12" text-anchor="middle">Llama LLM (9 formats) + Whisper (STT)</text>
+
+  <!-- Outputs -->
+  <rect x="790" y="90" width="450" height="380" rx="14" fill="#111A2E" stroke="#334155"/>
+  <text x="1015" y="122" fill="#E2E8F0" font-size="15" font-weight="700" text-anchor="middle">📦 9 Output Formats</text>
+  <g font-size="12" fill="#CBD5E1">
+    <rect x="810" y="140" width="200" height="40" rx="8" fill="#1E293B"/><text x="822" y="165">📸 Instagram Caption</text>
+    <rect x="1030" y="140" width="200" height="40" rx="8" fill="#1E293B"/><text x="1042" y="165">🐦 Twitter/X Thread</text>
+    <rect x="810" y="190" width="200" height="40" rx="8" fill="#1E293B"/><text x="822" y="215">✍️ SEO Blog Post</text>
+    <rect x="1030" y="190" width="200" height="40" rx="8" fill="#1E293B"/><text x="1042" y="215">🎬 Short Video Script</text>
+    <rect x="810" y="240" width="200" height="40" rx="8" fill="#1E293B"/><text x="822" y="265">✅ Key Points Summary</text>
+    <rect x="1030" y="240" width="200" height="40" rx="8" fill="#1E293B"/><text x="1042" y="265">▶️ YT Description+Chapters</text>
+    <rect x="810" y="290" width="200" height="40" rx="8" fill="#1E293B"/><text x="822" y="315">🎵 TikTok Caption</text>
+    <rect x="1030" y="290" width="200" height="40" rx="8" fill="#1E293B"/><text x="1042" y="315">🖼️ AI Thumbnails</text>
+    <rect x="810" y="340" width="420" height="40" rx="8" fill="#1E293B" stroke="#6366F1"/><text x="822" y="365">📤 Export: Copy • Notion • ZIP • Public Share Link</text>
+    <rect x="810" y="390" width="420" height="40" rx="8" fill="#1E293B" stroke="#F59E0B"/><text x="822" y="415">💎 Credits: 3 free → top-up via WhatsApp (QRIS)</text>
+  </g>
+
+  <!-- Services bottom -->
+  <g font-size="12" fill="#CBD5E1">
+    <rect x="40" y="560" width="180" height="50" rx="10" fill="#1E293B" stroke="#334155"/><text x="130" y="590" text-anchor="middle">🗄️ SQLite (users, projects)</text>
+    <rect x="240" y="560" width="180" height="50" rx="10" fill="#1E293B" stroke="#334155"/><text x="330" y="590" text-anchor="middle">🎨 Pollinations (images)</text>
+    <rect x="440" y="560" width="180" height="50" rx="10" fill="#1E293B" stroke="#334155"/><text x="530" y="590" text-anchor="middle">📧 Gmail SMTP (OTP)</text>
+    <rect x="640" y="560" width="180" height="50" rx="10" fill="#1E293B" stroke="#334155"/><text x="730" y="590" text-anchor="middle">💬 WhatsApp Payments</text>
+    <rect x="840" y="560" width="180" height="50" rx="10" fill="#1E293B" stroke="#334155"/><text x="930" y="590" text-anchor="middle">📘 Notion API</text>
+    <rect x="1040" y="560" width="200" height="50" rx="10" fill="#1E293B" stroke="#334155"/><text x="1140" y="590" text-anchor="middle">☁️ Vercel + Railway ready</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="290" y1="340" x2="392" y2="340" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="550" y1="238" x2="550" y2="188" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="340" x2="782" y2="300" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="550" y1="442" x2="550" y2="552" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="340" y="325" fill="#64748B" font-size="11" text-anchor="middle">REST + JWT</text>
+</svg>
