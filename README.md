@@ -31,7 +31,11 @@ Personal stats yang hidup • pipeline stepper real-time • 9 format per video 
 sistem kredit & top-up • sidebar navigasi profesional — semua dalam satu layar.
 </em>
 </p>
-## ✨ Features
+---
+
+🔗 **Live Demo:** [https://repurpose-ai-web-eight.vercel.app](https://repurpose-ai-web-eight.vercel.app)
+
+## ✨** Feature**
 
 | Category | Details |
 |---|---|
