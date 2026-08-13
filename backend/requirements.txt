@@ -1,6 +1,9 @@
-fastapi
-uvicorn[standard]
-sqlalchemy
-yt-dlp
-openai
-pydantic-settings
+fastapi>=0.115
+uvicorn[standard]>=0.30
+sqlalchemy>=2.0
+yt-dlp>=2024.8.1
+openai>=1.40
+pydantic-settings>=2.3
+youtube-transcript-api>=0.6.2
+PyJWT>=2.8
+requests>=2.31
