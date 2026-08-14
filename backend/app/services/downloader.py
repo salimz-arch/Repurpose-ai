@@ -27,23 +27,28 @@ def get_cookiefile():
 def download_audio(url: str, output_dir: str) -> str:
     os.makedirs(output_dir, exist_ok=True)
     base_opts = {
-    "format": "bestaudio[ext=m4a]/bestaudio/best",
-    "outtmpl": os.path.join(output_dir, "audio.%(ext)s"),
-    "quiet": True,
-    "noplaylist": True,
-    "js_runtimes": {"node": {"path": None}},
-    "remote_components": ["ejs:github"],
-    "extractor_args": {
-        "youtube": {
-            "player_client": ["web", "mweb"],  # pakai client mobile sebagai fallback
-        }
-    },
-}
+        "format": "bestaudio/best",  # Lebih flexible, gak maksa m4a
+        "outtmpl": os.path.join(output_dir, "audio.%(ext)s"),
+        "quiet": True,
+        "noplaylist": True,
+        "js_runtimes": {"node": {"path": None}},
+        "remote_components": ["ejs:github"],
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["web", "mweb", "android"],  # Multiple fallback
+            }
+        },
+        "postprocessors": [{
+            "key": "FFmpegExtractAudio",
+            "preferredcodec": "mp3",
+            "preferredquality": "192",
+        }],
+    }
 
     attempts = []
     cookie = get_cookiefile()
     if cookie:
-        attempts.append({**base_opts, "cookiefile": cookie})  # jalur sakti
+        attempts.append({**base_opts, "cookiefile": cookie})
     attempts.append(base_opts)
 
     last_err = None
@@ -60,9 +65,5 @@ def download_audio(url: str, output_dir: str) -> str:
                 os.remove(f)
 
     raise Exception(
-        "YouTube mendeteksi bot dan cookies tidak tersedia. "
-        "Solusi: set env YOUTUBE_COOKIES_B64 (base64 cookies.txt) di Railway, atau "
-        "taruh cookies.txt di folder backend (export via extension "
-        "'Get cookies.txt LOCALLY'). "
-        f"Detail: {last_err}"
+        f"YouTube download gagal. Detail: {last_err}"
     )
