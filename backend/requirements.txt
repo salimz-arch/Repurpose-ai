@@ -7,3 +7,5 @@ pydantic-settings>=2.3
 youtube-transcript-api>=0.6.2
 PyJWT>=2.8
 requests>=2.31
+pycryptodome
+brotli
