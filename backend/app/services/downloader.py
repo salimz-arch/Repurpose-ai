@@ -1,9 +1,28 @@
 import os
 import glob
+import base64
+import tempfile
 import yt_dlp
 
 BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 COOKIE_FILE = os.path.join(BACKEND_DIR, "cookies.txt")
+
+
+def get_cookiefile():
+    """Prod: decode env YOUTUBE_COOKIES_B64. Dev: cookies.txt lokal."""
+    b64 = os.environ.get("YOUTUBE_COOKIES_B64", "").strip()
+    if b64:
+        path = os.path.join(tempfile.gettempdir(), "yt_cookies.txt")
+        try:
+            with open(path, "wb") as f:
+                f.write(base64.b64decode(b64))
+            return path
+        except Exception as e:
+            print(f"⚠️ Gagal decode YOUTUBE_COOKIES_B64: {e}")
+    if os.path.exists(COOKIE_FILE):
+        return COOKIE_FILE
+    return None
+
 
 def download_audio(url: str, output_dir: str) -> str:
     os.makedirs(output_dir, exist_ok=True)
@@ -17,8 +36,9 @@ def download_audio(url: str, output_dir: str) -> str:
     }
 
     attempts = []
-    if os.path.exists(COOKIE_FILE):
-        attempts.append({**base_opts, "cookiefile": COOKIE_FILE})  # jalur sakti
+    cookie = get_cookiefile()
+    if cookie:
+        attempts.append({**base_opts, "cookiefile": cookie})  # jalur sakti
     attempts.append(base_opts)
 
     last_err = None
@@ -36,7 +56,8 @@ def download_audio(url: str, output_dir: str) -> str:
 
     raise Exception(
         "YouTube mendeteksi bot dan cookies tidak tersedia. "
-        "Solusi: (1) taruh file cookies.txt di folder backend (export via extension "
-        "'Get cookies.txt LOCALLY'), atau (2) ganti jaringan (tethering HP). "
+        "Solusi: set env YOUTUBE_COOKIES_B64 (base64 cookies.txt) di Railway, atau "
+        "taruh cookies.txt di folder backend (export via extension "
+        "'Get cookies.txt LOCALLY'). "
         f"Detail: {last_err}"
     )
