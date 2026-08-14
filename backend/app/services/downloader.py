@@ -27,13 +27,18 @@ def get_cookiefile():
 def download_audio(url: str, output_dir: str) -> str:
     os.makedirs(output_dir, exist_ok=True)
     base_opts = {
-        "format": "bestaudio[ext=m4a]/bestaudio/best",
-        "outtmpl": os.path.join(output_dir, "audio.%(ext)s"),
-        "quiet": True,
-        "noplaylist": True,
-        "js_runtimes": {"node": {"path": None}},
-        "remote_components": ["ejs:github"],
-    }
+    "format": "bestaudio[ext=m4a]/bestaudio/best",
+    "outtmpl": os.path.join(output_dir, "audio.%(ext)s"),
+    "quiet": True,
+    "noplaylist": True,
+    "js_runtimes": {"node": {"path": None}},
+    "remote_components": ["ejs:github"],
+    "extractor_args": {
+        "youtube": {
+            "player_client": ["web", "mweb"],  # pakai client mobile sebagai fallback
+        }
+    },
+}
 
     attempts = []
     cookie = get_cookiefile()
