@@ -9,4 +9,3 @@ PyJWT>=2.8
 requests>=2.31
 pycryptodome
 brotli
-git+https://github.com/Brainicism/bgutil-ytdlp-nip.git
